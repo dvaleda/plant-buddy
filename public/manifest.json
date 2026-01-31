@@ -1,0 +1,17 @@
+{
+  "name": "Plant Buddy",
+  "short_name": "PlantBuddy",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "theme_color": "#28a745",
+  "background_color": "#ffffff",
+  "description": "Aplikacija za praćenje biljaka",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

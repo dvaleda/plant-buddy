@@ -1,26 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>Moje biljke</h1>
+    <NotificationToggle />
+    <AddPlant />
+    <PlantList :plants="plants" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddPlant from './components/AddPlant.vue'
+import PlantList from './components/PlantList.vue'
+import NotificationToggle from './components/NotificationToggle.vue'
+import { mapState } from 'vuex'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: { AddPlant, PlantList, NotificationToggle },
+  computed: {
+    ...mapState(['plants'])
   }
 }
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #e9ecef;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-bottom: 30px;
 }
 </style>
